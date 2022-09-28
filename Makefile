@@ -2,7 +2,7 @@ SHELL		=	/bin/sh
 
 NAME		=	libft.a
 
-CC			=	cc
+CC			=	gcc
 CPPFLAGS	=	-Wall -Wextra -Werror
 
 AR			=	ar
@@ -28,7 +28,7 @@ $(NAME)		:	$(OBJECT)
 				$(CC) $(CPPFLAGS) -c $< -o $@
 
 check		:	all
-				$(CC) $(NAME) test.c -o test.out
+				$(CC) test.c $(NAME) -o test.out
 				./test.out
 
 clean		:
