@@ -9,5 +9,5 @@ size_t	my_strlen(string_t string)
 	{
 		i += 1;
 	}
-	return i;
+	return i - 1;
 }
