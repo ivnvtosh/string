@@ -28,8 +28,8 @@ $(NAME)		:	$(OBJECT)
 				$(CC) $(CPPFLAGS) -c $< -o $@
 
 check		:	all
-				$(CC) $(NAME) test.c -o test
-				./test
+				$(CC) $(NAME) test.c -o test.out
+				./test.out
 
 clean		:
 				$(RM) $(OBJECT)
