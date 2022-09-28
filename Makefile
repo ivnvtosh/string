@@ -17,7 +17,7 @@ OBJECT		=	strlen.o
 .SUFFIXES	:
 .SUFFIXES	:	.c .o
 
-.PHONY		:	all clean fclean re
+.PHONY		:	all check clean fclean re
 
 all			:	$(NAME)
 
@@ -26,6 +26,10 @@ $(NAME)		:	$(OBJECT)
 
 %.o			:	%.c $(HEADER)
 				$(CC) $(CPPFLAGS) -c $< -o $@
+
+check		:	all
+				$(CC) $(NAME) test.c -o test
+				./test
 
 clean		:
 				$(RM) $(OBJECT)
