@@ -1,5 +1,6 @@
 #include "string.h"
 #include "stdlib.h"
+#include "stdio.h"
 
 int	main(void)
 {
@@ -10,6 +11,8 @@ int	main(void)
 	expected = 9;
 	if (returned != expected)
 	{
+		printf("returned: %ld\n", returned);
+		printf("expected: %ld\n", expected);
 		return EXIT_FAILURE;
 	}
 	return EXIT_SUCCESS;
